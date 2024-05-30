@@ -6,8 +6,8 @@
 
 typedef enum LinkedListType {
     Singly =0,
-    doubly = 1,
-    circular =2 
+    Doubly = 1,
+    Circular =2 
 }ListType;
 
 template <typename T> class Node {
@@ -20,7 +20,7 @@ template <typename T> class Node {
 
         // getter and setter methods to encapsulate the da  ta, 
         // next, and prev members.
-        T Getdata() const { return data; }
+        T getData() const { return data; }
         Node<T>* GetNext() const {return next; }
         Node<T>* GetPrevious() const {return prev; }
 
@@ -45,6 +45,8 @@ template <typename T> class LinkedList {
         LinkedList(LinkedList&& llist) noexcept; //Move operator
         LinkedList& operator=(LinkedList&& llist) noexcept; //Move Assignment operator
        
+        Node<T>* getHead() const { return head; }
+
         void ListInitialize();
         void ListAddNodeAtEnd(T value);
         void ListAddNodeAtBeginning(T value);

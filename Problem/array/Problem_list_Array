@@ -1,0 +1,41 @@
+Top 20 Array Problems:
+----------------------------
+Two Sum: Given an array of integers, find two numbers such that they add up to a specific target number.
+
+Longest Consecutive Sequence: Given an unsorted array of integers, find the length of the longest consecutive elements sequence.
+
+Trapping Rain Water: Given n non-negative integers representing an elevation map where the width of each bar is 1, compute how much water it can trap after raining.
+
+Maximum Subarray: Find the contiguous subarray within an array (containing at least one number) which has the largest sum.
+
+Product of Array Except Self: Given an array nums of n integers where n > 1, return an array output such that output[i] is equal to the product of all the elements of nums except nums[i].
+
+Find Minimum in Rotated Sorted Array: Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand. Find the minimum element.
+
+Search in Rotated Sorted Array: Write an efficient algorithm that searches for a target value in a rotated sorted array.
+
+Median of Two Sorted Arrays: There are two sorted arrays. Find the median of the two sorted arrays.
+
+3Sum: Given an array nums of n integers, find all unique triplets in the array which gives the sum of zero.
+
+Subarray Sum Equals K: Given an array of integers and an integer k, find the total number of continuous subarrays whose sum equals to k.
+
+Merge Intervals: Given a collection of intervals, merge all overlapping intervals.
+
+Best Time to Buy and Sell Stock: Find the maximum profit you can achieve. You may complete as many transactions as you like (i.e., buy one and sell one share of the stock multiple times).
+
+Longest Increasing Subsequence: Find the length of the longest increasing subsequence in an unsorted array of integers.
+
+Next Permutation: Implement next permutation, which rearranges numbers into the lexicographically next greater permutation of numbers.
+
+Word Search: Given a 2D board and a word, find if the word exists in the grid.
+
+Sort Colors: Given an array with n objects colored red, white, or blue, sort them in-place so that objects of the same color are adjacent, with the colors in the order red, white, and blue.
+
+Minimum Size Subarray Sum: Given an array of n positive integers and a positive integer s, find the minimal length of a contiguous subarray of which the sum is greater than or equal to s. If there isn't one, return 0.
+
+Sliding Window Maximum: Given an array nums, there is a sliding window of size k which is moving from the very left of the array to the very right. You can only see the k numbers in the window. Each time the sliding window moves right by one position. Return the max sliding window.
+
+Kth Largest Element in an Array: Find the kth largest element in an unsorted array.
+
+Spiral Matrix: Given an m x n matrix, return all elements of the matrix in spiral order.

@@ -1,0 +1,5 @@
+if(EXISTS "C:/Users/lifto/Documents/C++/build/LinkedListTests[1]_tests.cmake")
+  include("C:/Users/lifto/Documents/C++/build/LinkedListTests[1]_tests.cmake")
+else()
+  add_test(LinkedListTests_NOT_BUILT LinkedListTests_NOT_BUILT)
+endif()

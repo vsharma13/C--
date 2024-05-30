@@ -6,7 +6,7 @@ template<typename T>
 Node<T>::Node(T value) : data(value), next(nullptr), prev(nullptr) {}
 
 template <typename T>
-T Node<T>::Getdata() const {return data;}
+T Node<T>::getData() const {return data;}
 
 template <typename T> 
 Node<T>* Node<T>::GetNext() const { return next; }
@@ -189,4 +189,68 @@ void LinkedList<T>::ListAddNodeAt(T value, size_t position) {
     if(type == doubly || type == circular) {
         newNode->SetPrevious(temp);
     }
+}
+
+template <typename T>
+void LinkedList<T>::ListRemoveNodeAtEnd(T value)
+{
+    if (!head) return;
+
+    if (head->getNext() == nullptr) {
+        delete head;
+        head = nullptr;
+        return;
+    }
+
+    Node<T>* temp = head;
+    while (temp->getNext()->getNext() != nullptr) {
+        temp = temp->getNext();
+    }
+
+    delete temp->getNext();
+    temp->setNext(nullptr);
+}
+
+template <typename T>
+void LinkedList<T>::ListRemoveNodeAtBeginning(T value)
+{
+    if (!head) return;
+
+    Node<T>* temp = head;
+    head = head->getNext();
+    if (head && (type == Doubly || type == Circular)) {
+        head->setPrev(nullptr);
+    }
+    delete temp;
+
+    if (type == Circular && head) {
+        Node<T>* tail = head;
+        while (tail->getNext() != head) {
+            tail = tail->getNext();
+        }
+        tail->setNext(head);
+    }
+}
+
+template <typename T>
+void LinkedList<T>::ListRemoveNodeAt(T value, size_t pos)
+{
+    if (position == 0) {
+        ListRemoveNodeAtBeginning();
+        return;
+    }
+
+    Node<T>* temp = head;
+    for (size_t i = 0; i < position - 1 && temp->getNext() != nullptr; ++i) {
+        temp = temp->getNext();
+    }
+
+    if (temp->getNext() == nullptr) return;
+
+    Node<T>* nodeToDelete = temp->getNext();
+    temp->setNext(nodeToDelete->getNext());
+    if (nodeToDelete->getNext() != nullptr && (type == Doubly || type == Circular)) {
+        nodeToDelete->getNext()->setPrev(temp);
+    }
+    delete nodeToDelete;
 }

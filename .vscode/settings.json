@@ -2,5 +2,6 @@
     "files.associations": {
         "vector": "cpp",
         "iostream": "cpp"
-    }
+    },
+    "cmake.sourceDirectory": "C:/Users/lifto/Documents/C++/Problem/LinkedList"
 }
